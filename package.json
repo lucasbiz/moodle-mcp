@@ -1,0 +1,32 @@
+{
+  "name": "moodle-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor MCP local para o Moodle UFSC: agenda, planos de ensino, notas e materiais.",
+  "bin": {
+    "moodle-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "install-agent": "node dist/index.js install",
+    "doctor": "node dist/index.js doctor"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "better-sqlite3": "^13.0.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
